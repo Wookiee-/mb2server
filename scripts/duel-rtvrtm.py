@@ -1387,7 +1387,7 @@ class Config(object):
 
             if not self.maps:
 
-              self.maps = join_path(dirname(self.config_path), "maps.txt")
+              self.maps = join_path(dirname(self.config_path), "duel-primary.txt")
 
             else:
 
@@ -1407,7 +1407,7 @@ class Config(object):
 
             if not self.secondary_maps:
 
-              self.secondary_maps = join_path(dirname(self.config_path), "secondary_maps.txt")
+              self.secondary_maps = join_path(dirname(self.config_path), "duel-secondary.txt")
 
             else:
             
@@ -2990,7 +2990,7 @@ class Config(object):
 
             if not self._maps:
 
-              self._maps = join_path(dirname(self.config_path), "maps.txt")
+              self._maps = join_path(dirname(self.config_path), "duel-primary.txt")
 
             else:
 
@@ -3011,7 +3011,7 @@ class Config(object):
 
             if not self._secondary_maps:
 
-              self._secondary_maps = join_path(dirname(self.config_path), "secondary_maps.txt")
+              self._secondary_maps = join_path(dirname(self.config_path), "duel-secondary.txt")
 
             else:
             

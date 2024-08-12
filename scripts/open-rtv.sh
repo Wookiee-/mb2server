@@ -6,6 +6,6 @@ cd "`dirname "$0"`"
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 while :
 do
-  python2 rtvrtm.py -t 10
+  python2 open-rtvrtm.py -t 10
   sleep 5
 done
