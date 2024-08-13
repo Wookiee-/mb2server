@@ -89,17 +89,17 @@ debian () {
           "Scripts")
 		cd $SCRIPTPATH/scripts/openjk
 		
-		cp *.* $OPENJKPATH/
-		
 		chmod +x *.py
 		chmod +x *.sh
+				
+		cp *.* $OPENJKPATH/
 		
 		cd $SCRIPTPATH/scripts/openjk/MBII
-		
-		cp *.* $MBIIPATHPATH/
-		
+
 		chmod +x *.cfg
 		chmod +x *.txt	
+		
+		cp *.* $MBIIPATH/			
                 debian;
               ;;
           "Dotnet")
@@ -208,17 +208,17 @@ ubuntu () {
           "Scripts")
 		cd $SCRIPTPATH/scripts/openjk
 		
-		cp *.* $OPENJKPATH/
-		
 		chmod +x *.py
 		chmod +x *.sh
+				
+		cp *.* $OPENJKPATH/
 		
 		cd $SCRIPTPATH/scripts/openjk/MBII
-		
-		cp *.* $MBIIPATHPATH/
-		
+
 		chmod +x *.cfg
-		chmod +x *.txt		
+		chmod +x *.txt	
+		
+		cp *.* $MBIIPATH/	
             ubuntu;
               ;;
           "Dotnet")
