@@ -1,1 +1,0 @@
-screen -X -S "mb2duel" kill
