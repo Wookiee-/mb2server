@@ -12,7 +12,7 @@ cd $SCRIPTPATH
 
 debian () {
   local PS3=$'\nPlease enter sub option: '
-  local options=("Dependancies" "Python Tools" "MBII Server" "RTVRTM" "Dotnet" "MBII Updater" "Update MBII" "Back to main menu")
+  local options=("Dependancies" "Python Tools" "MBII Server" "Scripts" "Dotnet" "MBII Updater" "Update MBII" "Back to main menu")
   local opt
   select opt in "${options[@]}"
   do
@@ -86,11 +86,20 @@ debian () {
 	fi
                 debian;
               ;;
-          "RTVRTM")
-		cd $SCRIPTPATH
+          "Scripts")
+		cd $SCRIPTPATH/scripts/openjk
 		
-		cp rtvrtm.py $OPENJKPATH/  
-		chmod +x $OPENJKPATH/rtvrtm.py
+		cp *.* $OPENJKPATH/
+		
+		chmod +x *.py
+		chmod +x *.sh
+		
+		cd $SCRIPTPATH/scripts/openjk/MBII
+		
+		cp *.* $MBIIPATHPATH/
+		
+		chmod +x *.cfg
+		chmod +x *.txt	
                 debian;
               ;;
           "Dotnet")
@@ -123,7 +132,7 @@ debian () {
 
 ubuntu () {
   local PS3=$'\nPlease enter sub option: '
-  local options=("Dependancies" "Python Tools" "MBII Server" "RTVRTM" "Dotnet" "MBII Updater" "Update MBII" "Back to main menu")
+  local options=("Dependancies" "Python Tools" "MBII Server" "Scripts" "Dotnet" "MBII Updater" "Update MBII" "Back to main menu")
   local opt
   select opt in "${options[@]}"
   do
@@ -196,11 +205,20 @@ ubuntu () {
 
 	fi
               ;;
-          "RTVRTM")
-		cd $SCRIPTPATH
+          "Scripts")
+		cd $SCRIPTPATH/scripts/openjk
 		
-		cp rtvrtm.py $OPENJKPATH/  
-		chmod +x $OPENJKPATH/rtvrtm.py
+		cp *.* $OPENJKPATH/
+		
+		chmod +x *.py
+		chmod +x *.sh
+		
+		cd $SCRIPTPATH/scripts/openjk/MBII
+		
+		cp *.* $MBIIPATHPATH/
+		
+		chmod +x *.cfg
+		chmod +x *.txt		
             ubuntu;
               ;;
           "Dotnet")
