@@ -78,8 +78,8 @@ debian () {
 		mv -f jampgamei386.so jampgamei386.jamp.so
 		cp jampgamei386.nopp.so jampgamei386.so
 		
-		mkdir -p $HOME/.local/share/openjk/
-		ln -s $HOME/openjk $HOME/.local/share/openjk/
+		mkdir -p $HOME/.local/share/
+		ln -s $HOME/openjk $HOME/.local/share/
 		
 		chmod +x $OPENJKPATH/mbiided.i386		
 
@@ -198,8 +198,8 @@ ubuntu () {
 		mv -f jampgamei386.so jampgamei386.jamp.so
 		cp jampgamei386.nopp.so jampgamei386.so
 		
-		mkdir -p $HOME/.local/share/openjk/
-		ln -s $HOME/openjk $HOME/.local/share/openjk/
+		mkdir -p $HOME/.local/share/
+		ln -s $HOME/openjk $HOME/.local/share/
 		
 		chmod +x $OPENJKPATH/mbiided.i386			
 
