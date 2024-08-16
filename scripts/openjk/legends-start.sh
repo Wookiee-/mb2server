@@ -5,11 +5,11 @@ echo "Superleet startup script!"
 status=1
 while [ $status -ne 0 ]
 do
-		screen -dmS open ./mbiided.i386 +set fs_game MBII +set dedicated 2 +set net_port 29070 +exec open-server.cfg 
+		screen -dmS open ./mbiided.i386 +set fs_game MBII +set dedicated 2 +set net_port 29070 +exec legends-server.cfg 
 
 		sleep 5
 
-		screen -dmS open python open-rtvrtm.py -c MBII/open-rtvrtm.cfg -t 10
+		screen -dmS open python legends-rtvrtm.py -c MBII/legends-rtvrtm.cfg -t 10
 		
         status=$?
 
