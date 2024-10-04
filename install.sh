@@ -49,6 +49,7 @@ debian () {
 		pyenv install 2.7.18 -s -v
 		pyenv local 2.7.18
 		debian;
+
 		;;
           "MBII Server")
  	if [ -d $MBIIPATH ]; then
@@ -59,18 +60,8 @@ debian () {
         	sleep 2
 
         #Download file lists, get the latest
-        wget -O "$SCRIPTPATH/downloads" https://archive.moviebattles.org/releases/
 
-        while IFS= read -r line; do
-
-                SUB='FULL'
-                if [[ "$line" == *"$SUB"* ]]; then
-                  FILENAME=`echo "$line" | grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i'`
-                  LINK="https://archive.moviebattles.org/releases/$FILENAME"
-                fi
-        done < downloads
-
-      		wget -O "$SCRIPTPATH/MBII.zip" $LINK
+		wget -O MBII.zip https://www.moddb.com/downloads/mirror/269567/130/06241e0265b173f9c6df52966539a117/?referer=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fmovie-battles-ii%2Fdownloads%2Fmovie-battles-ii-v1101-full
        		unzip -o MBII.zip -d $OPENJKPATH
 		rm MBII.zip
 		cd $MBIIPATH
@@ -151,11 +142,12 @@ ubuntu () {
           "Python Tools")
 		sudo apt-get update
                 sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-        if [ ! -r ~/.pyenv/ ]
-                        then
-                git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-                git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-                echo '
+
+	if [ ! -r ~/.pyenv/ ]
+			then
+    		git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+    		git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+    		echo '	
         # pyenv
                 export PYENV_ROOT="$HOME/.pyenv"
                 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -169,6 +161,7 @@ ubuntu () {
                 pyenv install 2.7.18 -s -v
                 pyenv local 2.7.18
             ubuntu;
+
               ;;
           "MBII Server")
  	if [ -d $MBIIPATH ]; then
@@ -179,18 +172,8 @@ ubuntu () {
         	sleep 2
 
         #Download file lists, get the latest
-        wget -O "$SCRIPTPATH/downloads" https://archive.moviebattles.org/releases/
 
-        while IFS= read -r line; do
-
-                SUB='FULL'
-                if [[ "$line" == *"$SUB"* ]]; then
-                  FILENAME=`echo "$line" | grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i'`
-                  LINK="https://archive.moviebattles.org/releases/$FILENAME"
-                fi
-        done < downloads
-
-      		wget -O "$SCRIPTPATH/MBII.zip" $LINK
+		wget -O MBII.zip https://www.moddb.com/downloads/mirror/269567/130/06241e0265b173f9c6df52966539a117/?referer=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fmovie-battles-ii%2Fdownloads%2Fmovie-battles-ii-v1101-full
        		unzip -o MBII.zip -d $OPENJKPATH
 		rm MBII.zip
 		cd $MBIIPATH
