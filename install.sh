@@ -94,8 +94,9 @@ debian () {
                 debian;
               ;;
           "Dotnet")
-		sudo add-apt-repository ppa:dotnet/backports
+		sudo apt-get install software-properties-common
                 sudo apt-get update
+		sudo add-apt-repository ppa:dotnet/backports
                 sudo apt-get install -y apt-transport-https dotnet-sdk-6.0
                 debian;
               ;;
@@ -205,8 +206,9 @@ ubuntu () {
             ubuntu;
               ;;
           "Dotnet")
-                sudo add-apt-repository ppa:dotnet/backports
+                sudo apt-get install software-properties-common
                 sudo apt-get update
+                sudo add-apt-repository ppa:dotnet/backports
                 sudo apt-get install -y apt-transport-https dotnet-sdk-6.0
             ubuntu;
               ;;
